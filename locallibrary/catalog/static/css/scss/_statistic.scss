@@ -1,0 +1,58 @@
+@use "vars.scss" as var;
+
+.statistic {
+    padding: 30px 0;
+    // .statistic__header
+
+    &__header {}
+
+    // .statistic__text
+
+    &__text {}
+
+    // .statistic__blocks
+
+    &__blocks {
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
+        row-gap: 40px;
+        margin: 60px auto;
+    }
+}
+.statistic-block {
+
+    // .statistic-block__image
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    // .statistic-block__header
+
+    &__header {
+        text-align: center;
+        font-family: var.$main-font;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        font-weight: 500;
+        color: var.$main-text-color;
+
+        margin-top: 12px;
+    }
+
+    // .statistic-block__count
+
+    &__count {
+        text-align: center;
+        font-family: var.$main-font;
+        font-size: 1.3em;
+        line-height: 1em;
+        font-weight: 500;
+        color: var.$main-text-color;
+
+        margin-top: 8px;
+    }
+}

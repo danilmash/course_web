@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="borrowed">
+      <h1 class="borrowed__header page-header">Borrowed books</h1>
+      {% if bookinstance_list %}
+      <ul class="borrowed__list">
+        {% for bookinst in bookinstance_list %}
+        <li class="borrowed__instance {% if bookinst.is_overdue %}borrowed__instance_overdue{% endif %}">
+          <a class="borrowed__link" href="{% url 'book-detail' bookinst.book.pk %}">{{bookinst.book.title}}</a><div class="borrowed__due"> ({{ bookinst.due_back }})</div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p class="borrowed__nothing section-header">There are no books borrowed.</p>
+      {% endif %}
+    </div>
+{% endblock %}

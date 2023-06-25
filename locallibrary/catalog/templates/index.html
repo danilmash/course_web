@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<section class="greetings">
+  <h1 class="greetings__header page-header">Библиотека</h1>
+  <p class="greetings__text section-text">Добро пожаловать на сайт нашей библиотеки</p>
+</section>
+
+<section class="statistic">
+  <div class="wrapper">
+    <h2 class="statistic__header section-header">Статистика в цифрах</h2>
+    <p class="statistic__text section-text">В нашей библиотеке есть:</p>
+    
+    <div class="statistic__blocks">
+      <div class="statistic__block statistic-block">
+        <div class="statistic-block__image-container"><img src="{% static '../static/img/books.png' %}" alt="Книги" class="statistic-block__image"></div>
+        <h3 class="statistic-block__header">Книги</h3>
+        <p class="statistic-block__count">{{ num_books }}</p>
+      </div>
+      <div class="statistic__block statistic-block">
+        <div class="statistic__block statistic-block">
+          <div class="statistic-block__image-container"><img src="{% static '../static/img/books-copy.png' %}" alt="Книги" class="statistic-block__image"></div>
+          <h3 class="statistic-block__header">Копии</h3>
+          <p class="statistic-block__count">{{ num_instances }}</p>
+        </div>
+      </div>
+      <div class="statistic__block statistic-block">
+        <div class="statistic__block statistic-block">
+          <div class="statistic-block__image-container"><img src="{% static '../static/img/dostoevskiy.jpg' %}" alt="Книги" class="statistic-block__image"></div>
+          <h3 class="statistic-block__header">Авторы</h3>
+          <p class="statistic-block__count">{{ num_authors }}</p>
+        </div>
+      </div>
+      <div class="statistic__block statistic-block">
+        <div class="statistic__block statistic-block">
+          <div class="statistic-block__image-container"><img src="{% static '../static/img/green-success.svg' %}" alt="Книги" class="statistic-block__image"></div>
+          <h3 class="statistic-block__header">Доступные копии</h3>
+          <p class="statistic-block__count">{{ num_instances_available }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

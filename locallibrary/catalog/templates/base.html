@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>Local Library</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/scss/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+</head>
+
+<body>
+
+  <svg class="symbols">
+
+    <symbol viewBox="0 0 24 24" id="logo">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6 3H8.4A2.4 2.4 0 0 0 6 5.4v11.2A2.4 2.4 0 0 0 8.4 19h11.2a2.4 2.4 0 0 0 2.4-2.4V5.4A2.4 2.4 0 0 0 19.6 3ZM9 8a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2h-8a1 1 0 0 1-1-1Zm1 2a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-8Zm-1 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z" fill="currentColor"/><path d="M4 5a1 1 0 0 0-2 0v11.6C2 20.132 4.868 23 8.4 23H20a1 1 0 1 0 0-2H8.4A4.403 4.403 0 0 1 4 16.6V5Z" fill="currentColor"/>
+    </symbol>
+
+  </svg>
+  <header class="header">
+    <div class="wrapper">
+      
+      <div class="header__content">
+        <a href="{% url 'index' %}" class="header__main-link">
+          <svg class="header__logo">
+            <use href="#logo"></use>
+          </svg>
+        </a>
+        
+        <nav class="header__nav navigation">
+          <ul class="navigation__list">
+            <div class="navigation__login">
+              {% if user.is_authenticated %}
+                <li class="navigation__item">
+                  <div class="navigation__user">{{ user.get_username }}</div>
+                </li>
+                <li class="navigation__item">
+                  <a href="{% url 'my-borrowed'%}" class="navigation__link">Мои книги</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="{% url 'logout'%}?next={{request.path}}" class="navigation__link">Выйти</a>
+                </li>
+              {% else %}
+              <li class="navigation__item">
+                <a href="{% url 'login'%}?next={{request.path}}" class="navigation__link">Войти</a>
+              </li>
+              {% endif %}
+            </div>
+            <li class="navigation__item">
+              <a href="{% url 'index' %}" class="navigation__link">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a href="{% url 'books' %}" class="navigation__link">Книги</a>
+            </li>
+            <li class="navigation__item">
+              <a href="{% url 'authors' %}" class="navigation__link">Авторы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+
+    {% block pagination %}
+      {% if is_paginated %}
+          <div class="pagination">
+              <span class="page-links">
+                  {% if page_obj.has_previous %}
+                      <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">Предыдущая страница</a>
+                  {% endif %}
+                  <span class="page-current">
+                      Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+                  </span>
+                  {% if page_obj.has_next %}
+                      <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">Следующая страница</a>
+                  {% endif %}
+              </span>
+          </div>
+      {% endif %}
+    {% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <p class="footer__text">
+        Allrightsreserved
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

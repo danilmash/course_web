@@ -1,0 +1,44 @@
+@use "vars.scss" as var;
+
+.wrapper {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: 48px;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.symbols {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+.hidden-header {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+

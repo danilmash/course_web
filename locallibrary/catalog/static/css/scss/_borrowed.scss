@@ -1,0 +1,70 @@
+@use "vars.scss" as var;
+
+.borrowed {
+
+    // .borrowed__header
+
+    &__header {}
+
+    // .borrowed__list
+
+    &__list {
+        display:  flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    // .borrowed__instance
+
+    &__instance {
+        display: flex; 
+        align-items: center;
+        font-family: var.$main-font;
+        font-size: 1.25em;
+        line-height: 1em;
+        font-weight: 400;
+    }
+
+    // .borrowed__link
+
+    &__link {
+        font-family: var.$main-font;
+        font-size: 1em;
+        line-height: 1em;
+        font-weight: 400;
+        color: var.$main-color;
+    }
+
+    // .borrowed__nothing
+
+    &__nothing {}
+
+    &__due {
+
+        margin-left: 10px;
+    }
+
+    &__instance {
+
+        // .borrowed__instance_overdue
+
+        &_overdue{
+    }
+}
+}
+
+.borrowed {
+
+    // .%}borrowed__instance
+
+    &__instance {
+
+        // .borrowed__instance_overdue
+
+        &_overdue{
+    }
+}
+}

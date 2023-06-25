@@ -1,0 +1,82 @@
+@use "vars.scss" as var;
+
+.header {
+    padding: 15px 0;
+    background-color: var.$main-color ;
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .header__main-link
+
+    &__main-link {
+        color: var.$link-color-1;
+
+        &:hover {
+            color: var.$link-color-2;
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        width: 48px;
+        height: 48px;
+
+        
+    }
+
+    // .header__nav
+
+    &__nav {
+        font-family: var.$main-font;
+    }
+}
+.wrapper {
+}
+.navigation {
+    
+
+    &__user {
+        text-align: center;
+        font-family: var.$main-font;
+        font-size: 1.3em;
+        line-height: .7em;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    &__login {
+        margin-right: 200px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    // .navigation__list
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    // .navigation__item
+
+    &__item {
+    }
+
+    // .navigation__link
+
+    &__link {
+        
+        height: 100%;
+        color: var.$link-color-1;
+
+        &:hover {
+            color: var.$link-color-2;
+        }
+    }
+}

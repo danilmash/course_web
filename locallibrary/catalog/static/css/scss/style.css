@@ -1,0 +1,259 @@
+.wrapper {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  height: 48px;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+main {
+  padding: 40px 0;
+}
+
+.symbols {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden-header {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  padding: 15px 0;
+  background-color: #233d66;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__main-link {
+  color: #fff;
+}
+.header__main-link:hover {
+  color: #c9e0fd;
+}
+.header__logo {
+  width: 48px;
+  height: 48px;
+}
+.header__nav {
+  font-family: "Roboto";
+}
+
+.navigation__user {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.3em;
+  line-height: 0.7em;
+  font-weight: 500;
+  color: #fff;
+}
+.navigation__login {
+  margin-right: 200px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navigation__list {
+  display: flex;
+  gap: 30px;
+}
+.navigation__link {
+  height: 100%;
+  color: #fff;
+}
+.navigation__link:hover {
+  color: #c9e0fd;
+}
+
+.footer {
+  padding: 15px 0;
+  background-color: #a6a6b6;
+}
+.footer__text {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.3em;
+  line-height: 1em;
+  font-weight: 500;
+  color: #141414;
+}
+
+.page-header {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 2.5em;
+  line-height: 1.3em;
+  font-weight: 500;
+  color: #141414;
+}
+
+.section-header {
+  display: block;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 2em;
+  line-height: 2em;
+  font-weight: 500;
+  color: #141414;
+}
+
+.section-text {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.5em;
+  line-height: 0.7em;
+  font-weight: 400;
+  color: #141414;
+  margin-top: 12px;
+}
+
+.greetings {
+  padding: 20px 0;
+}
+.statistic {
+  padding: 30px 0;
+}
+.statistic__blocks {
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
+  row-gap: 40px;
+  margin: 60px auto;
+}
+
+.statistic-block__image {
+  display: block;
+  margin: 0 auto;
+  max-width: 320px;
+}
+.statistic-block__header {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 500;
+  color: #141414;
+  margin-top: 12px;
+}
+.statistic-block__count {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.3em;
+  line-height: 1em;
+  font-weight: 500;
+  color: #141414;
+  margin-top: 8px;
+}
+
+.login__error {
+  color: rgb(156, 64, 64);
+}
+.login__form {
+  margin: auto;
+  margin-top: 200px;
+}
+
+.login-form {
+  padding: 20px 40px;
+  border: 3px #000 solid;
+  max-width: 450px;
+  border-radius: 30px;
+}
+.login-form__input-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.login-form__input-container:nth-of-type(2) {
+  margin-top: 20px;
+}
+.login-form__input-container > label {
+  font-family: "Roboto";
+  font-size: 1.25em;
+  line-height: 1em;
+  font-weight: 400;
+}
+.login-form__input-container > input {
+  border: none;
+  border-bottom: 1px #233d66 solid;
+  width: 100%;
+  font-family: "Roboto";
+  font-size: 1.25em;
+  line-height: 1em;
+  font-weight: 400;
+}
+.login-form__input-container > input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px #233d66 solid;
+}
+.login-form__button {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 15px 20px;
+  font-family: "Roboto";
+  font-size: 1em;
+  line-height: 0.5em;
+  font-weight: 400;
+  border-radius: 10px;
+  background-color: #233d66;
+  color: #fff;
+  border: 2px #233d66 solid;
+  outline: none;
+  transition: 0.3s;
+}
+.login-form__button:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.borrowed__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.borrowed__instance {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  font-size: 1.25em;
+  line-height: 1em;
+  font-weight: 400;
+}
+.borrowed__link {
+  font-family: "Roboto";
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 400;
+  color: #233d66;
+}
+.borrowed__due {
+  margin-left: 10px;
+}/*# sourceMappingURL=style.css.map */

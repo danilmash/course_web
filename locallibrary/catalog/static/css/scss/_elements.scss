@@ -1,0 +1,31 @@
+@use "vars" as var;
+
+.page-header {
+    text-align: center;
+    font-family: var.$main-font;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    font-weight: 500;
+    color: var.$main-text-color;
+
+}
+
+.section-header {
+    display: block;
+    text-align: center;
+    font-family: var.$main-font;
+    font-size: 2em;
+    line-height: 2em;
+    font-weight: 500;
+    color: var.$main-text-color;
+}
+
+.section-text {
+    text-align: center;
+    font-family: var.$main-font;
+    font-size: 1.5em;
+    line-height: 0.7em;
+    font-weight: 400;
+    color: var.$main-text-color;
+    margin-top: 12px;
+}
